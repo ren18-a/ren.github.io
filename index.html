@@ -6,147 +6,147 @@
     <title>Hobi Membaca</title>
     <style>
         body {
-            font-family: 'Segoe UI', sans-serif;
-            background: #fef6e4;
             margin: 0;
-            padding: 0;
+            font-family: 'Georgia', serif;
+            background: #f8f4f0;
             color: #333;
-            animation: fadeIn 1.5s ease-in;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+
         header {
-            background-color: #ffcb77;
+            background-color: #d4a373;
+            color: white;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 2em;
         }
+
         nav {
-            text-align: center;
-            background: #f4a261;
-            padding: 10px;
+            background-color: #faedcd;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px;
         }
+
         nav a {
-            margin: 0 15px;
-            color: white;
             text-decoration: none;
+            color: #7f5539;
             font-weight: bold;
         }
-        main {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+
+        nav a:hover {
+            color: #9c6644;
         }
-        h2 {
-            color: #765827;
+
+        .container {
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
         }
-        .quote {
-            font-style: italic;
-            color: #b08968;
-            border-left: 4px solid #ffb703;
-            padding-left: 15px;
-            margin: 20px 0;
-        }
-        img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
+
         .book {
-            display: flex;
-            margin-bottom: 40px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
+
+        .book:hover {
+            transform: scale(1.02);
+        }
+
         .book img {
-            width: 200px;
-            height: 300px;
+            width: 100%;
+            max-height: 300px;
             object-fit: cover;
-            margin-right: 20px;
+            border-radius: 8px;
+            margin-bottom: 10px;
         }
-        .book-details {
-            max-width: 750px;
-        }
+
         footer {
             text-align: center;
             padding: 20px;
-            background: #f4a261;
+            background-color: #d4a373;
             color: white;
-            margin-top: 40px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        h2 {
+            color: #7f5539;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Selamat Datang di Dunia Membaca</h1>
-    </header>
+
+    <header>📚 Dunia Membaca Ren</header>
+
     <nav>
-        <a href="index.html">Beranda</a>
-        <a href="tentangsaya.html">Tentang Saya</a>
+        <a href="#" onclick="showSection('beranda')">Beranda</a>
+        <a href="#" onclick="showSection('tentang')">Tentang Saya</a>
     </nav>
-    <main>
-        <h2>Mengapa Membaca itu Menyenangkan?</h2>
-        <p>
-            Membaca bukan hanya sekadar melihat huruf di atas kertas, tapi juga perjalanan ke dunia imajinasi tanpa batas.
-            Saat membaca, kita bisa menjelajahi tempat-tempat baru, memahami perspektif orang lain, dan memperkaya pengetahuan kita.
-        </p>
-        <div class="quote">
-            "Membaca adalah jendela dunia."
+
+    <div class="container">
+
+        <!-- Beranda -->
+        <div id="beranda">
+            <h2>Rekomendasi Buku</h2>
+
+            <div class="book">
+                <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="Tanah Lada">
+                <h3>Tanah Lada – Ziggy Zezsyazeoviennazabrizkie</h3>
+                <p>Sebuah novel penuh makna yang mengangkat suara anak-anak, luka, dan harapan. Ziggy menulis dengan gaya yang unik dan menyentuh, membuat pembaca ikut merasakan getir dan manis kehidupan seorang anak kecil yang luar biasa kuat.</p>
+            </div>
+
+            <div class="book">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794" alt="Hujan">
+                <h3>Hujan – Tere Liye</h3>
+                <p>Novel yang menggabungkan romansa, fiksi ilmiah, dan renungan tentang kehilangan. Hujan adalah kisah tentang cinta yang tidak selalu harus memiliki, namun tetap indah untuk dikenang.</p>
+            </div>
+
+            <div class="book">
+                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570" alt="Laut Bercerita">
+                <h3>Laut Bercerita – Leila S. Chudori</h3>
+                <p>Kisah mengharukan tentang aktivisme dan penghilangan paksa di Indonesia. Novel ini menyalakan empati dan menyuarakan kisah para pejuang yang tak terdengar dalam sejarah.</p>
+            </div>
+
+            <div class="book">
+                <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d" alt="Tentang Kamu">
+                <h3>Tentang Kamu – Tere Liye</h3>
+                <p>Perjalanan misterius seorang wanita tua yang menyimpan banyak rahasia hidup. Dibalut dengan gaya detektif dan narasi yang menyentuh, novel ini bikin penasaran hingga akhir.</p>
+            </div>
+
+            <div class="book">
+                <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d" alt="Le Petit Prince">
+                <h3>Le Petit Prince – Antoine de Saint-Exupéry</h3>
+                <p>Sebuah dongeng filosofis yang kaya akan makna kehidupan. Meski ditulis untuk anak-anak, buku ini justru menyentuh hati orang dewasa tentang cinta, kehilangan, dan imajinasi.</p>
+            </div>
         </div>
 
-        
-        <!-- Buku 1: Tanah Lada -->
-<div class="book">
-    <img src="image/di tanah lada.jpg" ="Tanah Lada">
-    <div class="book-details">
-        <h3>Tanah Lada - Ziggy Zezsyazeoviennazabrizkie</h3>
-        <p><strong>Ulasan:</strong> Tanah Lada adalah sebuah karya yang sangat unik dan penuh imajinasi. Buku ini bercerita tentang perjalanan seorang tokoh utama dalam menghadapi berbagai dinamika kehidupan, dari cinta hingga pertemuan dengan takdir yang penuh misteri. Ziggy melalui gaya bahasa yang khas menghadirkan cerita yang tidak hanya menggugah pikiran, tetapi juga menyentuh perasaan. Tanah Lada adalah buku yang membawa pembaca untuk merenung lebih dalam tentang arti kehidupan dan keberanian dalam mengambil keputusan.</p>
+        <!-- Tentang Saya -->
+        <div id="tentang" class="hidden">
+            <h2>Tentang Saya</h2>
+            <p>Halo! Saya Ren, seorang pecinta buku dan pengkhayal sejati. Membaca bagi saya bukan hanya hobi, tapi pelarian ke dunia lain yang penuh warna, suara, dan perasaan. Saya suka membaca di tempat yang tenang sambil minum teh hangat. Semoga koleksi bacaan saya bisa jadi rekomendasi untuk kamu juga!</p>
+            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70" alt="Ren membaca" style="width:100%; border-radius: 10px; margin-top: 20px;">
+        </div>
+
     </div>
-</div>
 
-
-        <!-- Buku 2: Hujan -->
-        <div class="book">
-            <img src="https://images.unsplash.com/photo-1523495493019-0c5b9f383e4f?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjA2Mnx8MHx0ZWFyY2h8Mnw2fGhpYmJhdnxlbnwwfHx8fDE2Njc2MTMwMzE&ixlib=rb-1.2.1&q=80&w=400" alt="Hujan">
-            <div class="book-details">
-                <h3>Hujan - Tere Liye</h3>
-                <p><strong>Ulasan:</strong> Hujan adalah sebuah kisah yang mengajak pembaca untuk merenung tentang arti kehilangan, pencarian jati diri, dan cinta yang tak mudah dilupakan. Melalui tokoh utama, Rangga, pembaca diajak mengelami perjalanan hidup yang penuh gejolak perasaan.</p>
-            </div>
-        </div>
-
-        <!-- Buku 3: Laut Bercerita -->
-        <div class="book">
-            <img src="https://images.unsplash.com/photo-1535402783587-e5e467be6745?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjA2Mnx8MHx0ZWFyY2h8Mnx8bG9vZCBwb3N0ZXJ8ZW58MHx8fHwxNjY3NjEyMjE5&ixlib=rb-1.2.1&q=80&w=400" alt="Laut Bercerita">
-            <div class="book-details">
-                <h3>Laut Bercerita - Leila S. Chudori</h3>
-                <p><strong>Ulasan:</strong> Laut Bercerita mengisahkan tentang kisah hidup seorang wanita bernama Alia yang terjebak dalam kesedihan dan kehilangan akibat peristiwa yang terjadi di masa lalu. Buku ini membawa pembaca untuk memahami pentingnya penyembuhan dan bagaimana hidup harus terus berjalan meski ada luka yang dalam.</p>
-            </div>
-        </div>
-
-        <!-- Buku 4: Tentang Kamu -->
-        <div class="book">
-            <img src="https://images.unsplash.com/photo-1514512060159-0acdb9c3c034?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjA2Mnx8MHx0ZWFyY2h8NXx8dGVyZSBsaWV8ZW58MHx8fHwxNjY3NjEyMjEz&ixlib=rb-1.2.1&q=80&w=400" alt="Tentang Kamu">
-            <div class="book-details">
-                <h3>Tentang Kamu - Tere Liye</h3>
-                <p><strong>Ulasan:</strong> Tentang Kamu menceritakan tentang kisah cinta yang penuh lika-liku. Dengan gaya bahasa yang penuh emosi, Tere Liye mengajak pembaca untuk merasakan perjuangan batin yang dialami oleh tokoh utama. Buku ini tentang bagaimana cinta bisa membawa kita pada kebahagiaan dan kesedihan yang tidak terduga.</p>
-            </div>
-        </div>
-
-        <!-- Buku 5: Le Petit Prince -->
-        <div class="book">
-            <img src="https://images.unsplash.com/photo-1511592401949-486bf4cfe4c9?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjA2Mnx8MHx0ZWFyY2h8M3x8bGVwZXRpdCByaW5jZXxlbnwwfHx8fDE2Njc2MTMyNzY&ixlib=rb-1.2.1&q=80&w=400" alt="Le Petit Prince">
-            <div class="book-details">
-                <h3>Le Petit Prince - Antoine de Saint-Exupéry</h3>
-                <p><strong>Ulasan:</strong> Le Petit Prince adalah cerita yang sederhana namun mengandung pesan yang dalam tentang kehidupan, persahabatan, dan cinta. Buku ini sangat cocok untuk pembaca dari segala usia karena mengajarkan kita untuk melihat dunia dengan mata hati yang lebih terbuka.</p>
-            </div>
-        </div>
-
-    </main>
     <footer>
-        Dibuat dengan ♥ oleh Penggemar Buku
+        Dibuat dengan 💛 oleh ren18-a
     </footer>
+
+    <script>
+        function showSection(id) {
+            document.getElementById('beranda').classList.add('hidden');
+            document.getElementById('tentang').classList.add('hidden');
+            document.getElementById(id).classList.remove('hidden');
+        }
+    </script>
+
 </body>
 </html>
